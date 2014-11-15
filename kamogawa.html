@@ -60,18 +60,7 @@ function insert(){
   // その中間に入る
   newpos = (couples[widestInd+1].pos + couples[widestInd].pos) / 2.0;
   div = newdiv(newpos);
-
   couples.splice(widestInd+1,0,div)
-
-  //couples2 = [];
-  //for(i=0;i<=widestInd;i++){
-  //  couples2[i] = couples[i];
- // }
- // couples2[widestInd+1] = div;
- // for(i=widestInd+1;i<len;i++){
- //   couples2[i+1] = couples[i];
- // }
- // couples = couples2;
 }
 
 function move(){
