@@ -19,8 +19,7 @@ $(function() {
   }
 
   couples[0] = newdiv(0.0);
-  pos = window.innerWidth-20;
-  couples[1] = newdiv(pos);
+  couples[1] = newdiv(window.innerWidth-20);
 
   setInterval(insert, 2000);
   switch(pattern){
@@ -28,12 +27,12 @@ $(function() {
     case 1: setInterval(move,50); break;
     case 2: setInterval(move,500); break;
   }
-
 });
 
 function setpos(div,pos){
   div.pos = pos;
   div.css('left',pos);
+  div.attr('class','couple');
 }
 
 function newdiv(pos){
@@ -94,16 +93,33 @@ function move(){
 body {
   background-color: #008000;;
 }
-div {
+div.couple {
   position: absolute;
   background-color: #ffff00;
   width:20;
   height:50;
-  top:100;
+  top:60;
+}
+a {
+  color:#ffffff;
 }
 -->
 </style>
 </head>
 <body>
+<div style="height:140;"></div>
+<div style="color:#ffffff;">
+  いくつかパタンがあります。
+  <ul>
+    <li><a href="kamogawa.html?pattern=0">パタン0</a>: すぐ移動
+    <li><a href="kamogawa.html?pattern=1">パタン1</a>: じわじわ移動
+    <li><a href="kamogawa.html?pattern=2">パタン2</a>: 左右の幅の差が我慢できなくなると移動
+  </ul>
+  <p>
+  <a href="http://pitecan.com/">Toshiyuki Masui</a>　
+  <a href="mailto:masui@pitecan.com">masui@pitecan.com</a>　
+  <a href="http://twitter.com/masui">@masui</a>　
+  <a href="http://facebook.com/toshiyukimasui">Facebook</a>　
+</div>
 </body>
 </html>
